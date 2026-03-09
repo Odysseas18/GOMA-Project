@@ -24,10 +24,9 @@ Marketing & Analytics
 📂 Projets Data
 📊 Analyse des données e-commerce
 
-🔗 Repository :
-[Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/Exercice%20Covid.ipynb)
+🔗 Liste analyse de données :
 
-COVID-19 Data Analysis
+COVID-19 Data Analysis [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/Exercice%20Covid.ipynb)
 
 Analyse exploratoire de données sur la pandémie de COVID-19 afin d'étudier l'évolution des cas, décès et guérisons à l'échelle mondiale.
 
@@ -98,4 +97,3 @@ Python & SQL pour l’analyse de données
 📧 odysseas.gomankala@gmail.com
 
 💼 LinkedIn : (ajouter ton lien)
-📂 Portfolio : (ajouter ton site ou GitHub)
