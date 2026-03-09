@@ -1,5 +1,5 @@
 Bonjour,
-Je suis Odysseas GOMA NKALA; Titulaire d’un Master en Marketing International, j’ai progressivement orienté mon parcours vers l’analyse de données et la performance business. Mon expérience en SEO, analyse de verbatims clients et optimisation de contenus m’a permis de transformer des données utilisateurs en recommandations stratégiques concrètes. 
+Je suis Odysseas GOMA NKALA; titulaire d’un Master en Marketing International, j’ai progressivement orienté mon parcours vers l’analyse de données et la performance business. Mon expérience en SEO, analyse de verbatims clients et optimisation de contenus m’a permis de transformer des données utilisateurs en recommandations stratégiques concrètes. 
 
 
 Aujourd’hui, je développe mes compétences en Python, SQL et data visualisation afin de concevoir des analyses plus avancées et soutenir la prise de décision data-driven. 
