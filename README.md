@@ -49,7 +49,11 @@ Collecte automatisée de données à partir du web afin de construire un dataset
 
 Technologies : Python, BeautifulSoup, Requests, Pandas
 
+🛒 Analyse des ventes Amazon – Exploration et visualisation des données [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/notebookamazon.ipynb)
 
+Dans ce projet, j’ai réalisé une analyse exploratoire d’un dataset de ventes Amazon afin d’identifier les tendances de performance commerciale selon les régions et les périodes.
+
+L’objectif était de transformer des données brutes en indicateurs exploitables permettant de mieux comprendre la dynamique des ventes.
 
 
 
@@ -62,7 +66,7 @@ Analyse SEO et performances de recherche
 
 Création de rapports et dashboards Excel pour le suivi des KPIs 
 
-CV GOMA Odysseas
+
 
 Lamy Liaisons — Chargée de Marketing
 
