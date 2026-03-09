@@ -1,47 +1,25 @@
 Bonjour,
 Je suis Odysseas GOMA NKALA; titulaire d’un Master en Marketing International, j’ai progressivement orienté mon parcours vers l’analyse de données et la performance business. Mon expérience en SEO, analyse de verbatims clients et optimisation de contenus m’a permis de transformer des données utilisateurs en recommandations stratégiques concrètes. 
 
-
 Aujourd’hui, je développe mes compétences en Python, SQL et data visualisation afin de concevoir des analyses plus avancées et soutenir la prise de décision data-driven. 
 
 💡 Mon objectif : utiliser la data pour comprendre les comportements utilisateurs et améliorer les performances produits et marketing.
 
 🚀 Compétences
-📊 Data Analysis
+Analyse de données
+-Python (Pandas, Numpy)
+-SQL
+-Excel
+Data visualisation
+-Power BI
+-Looker Studio
+-Matplotlib
+-Seaborn
 
-Python (Pandas, Numpy)
-
-SQL
-
-Excel (analyse, dashboards)
-
-Data cleaning & data exploration
-
-📈 Data Visualization
-
-Power BI
-
-Looker Studio / Google Data Studio
-
-Tableaux de bord KPI
-
-🔎 Marketing & SEO Analytics
-
-Google Analytics
-
-Google Search Console
-
-SEMrush / Ahrefs
-
-Analyse de performances SEO
-
-🛠 Outils
-
-Google Tag Manager
-
-Trello / Jira (Agile)
-
-Pack Office
+Marketing & Analytics
+-Google Analytics
+-Google Search Console
+-SEMrush / Ahrefs
 
 📂 Projets Data
 📊 Analyse des données e-commerce
@@ -49,182 +27,32 @@ Pack Office
 🔗 Repository :
 [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/Exercice%20Covid.ipynb)
 
-Objectif du projet
+COVID-19 Data Analysis
 
-Ce projet consiste à analyser des données mondiales sur la pandémie de COVID-19 afin de comprendre l’évolution du virus dans le temps et son impact dans différents pays.
+Analyse exploratoire de données sur la pandémie de COVID-19 afin d'étudier l'évolution des cas, décès et guérisons à l'échelle mondiale.
 
-L’objectif est d’explorer plusieurs indicateurs clés comme :
+Technologies : Python, Pandas, Matplotlib, Seaborn, Plotly
 
-le nombre de cas confirmés
+🎬 Analyse cinématographique: [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20cin%C3%A9matographique.ipynb)
 
-le nombre de décès
+Exploration d’un dataset de films afin d’identifier les tendances du secteur cinématographique et les caractéristiques des films populaires.
 
-le nombre de guérisons
+Technologies : Python, Pandas, Matplotlib, Seaborn
 
-les taux de mortalité et de guérison
+🎥 Analyse du catalogue Netflix : [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20Netflix.ipynb)
+Analyse du catalogue Netflix afin d’identifier les tendances de contenu, les genres dominants et la distribution des films et séries.
 
-Cette analyse permet de mettre en évidence des tendances globales et de comparer l’impact de la pandémie selon les pays.
+Technologies : Python, Pandas, Matplotlib, Seaborn
 
-📂 Jeux de données utilisés
+🏅 Web Scraping – Jeux Olympiques : [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/Scrapping%20donn%C3%A9es%20JO.ipynb)
 
-L’analyse repose sur plusieurs datasets contenant des informations sur l’évolution du COVID-19 :
+Collecte automatisée de données à partir du web afin de construire un dataset sur les Jeux Olympiques.
 
-country_wise_latest.csv
+Technologies : Python, BeautifulSoup, Requests, Pandas
 
-covid_19_clean_complete.csv
 
-day_wise.csv
 
-full_grouped.csv
 
-usa_county_wise.csv
-
-Ces jeux de données fournissent des informations sur :
-
-les cas confirmés
-
-les décès
-
-les patients guéris
-
-l’évolution quotidienne de la pandémie
-
-les statistiques par pays et par région
-
-🧹 Nettoyage et préparation des données
-
-Avant l’analyse, plusieurs étapes de data cleaning ont été réalisées :
-
-standardisation des noms de colonnes
-
-conversion des dates au format datetime
-
-vérification et gestion des valeurs manquantes
-
-préparation des données pour l’analyse et la visualisation
-
-Ces étapes permettent d’assurer la qualité et la fiabilité de l’analyse.
-
-🔍 Analyse exploratoire des données (EDA)
-
-Plusieurs axes d’analyse ont été explorés :
-
-Évolution mondiale du COVID-19
-
-Analyse de l’évolution des cas confirmés, des décès et des guérisons dans le temps afin d’observer la progression de la pandémie.
-
-Comparaison entre pays
-
-Identification des pays les plus touchés par la pandémie en termes de :
-
-nombre de cas
-
-nombre de décès
-
-nombre de guérisons
-
-Analyse des indicateurs clés
-
-Calcul de métriques importantes :
-
-Taux de mortalité = décès / cas confirmés
-
-Taux de guérison = guérisons / cas confirmés
-
-Ces indicateurs permettent de mieux comprendre l’impact de la pandémie selon les régions.
-
-📈 Visualisation des données
-
-Différents graphiques ont été réalisés afin de rendre l’analyse plus lisible et intuitive :
-
-évolution des cas dans le temps
-
-comparaison entre pays
-
-visualisation des taux de mortalité et de guérison
-
-graphiques interactifs
-
-Bibliothèques utilisées :
-
-Matplotlib
-
-Seaborn
-
-Plotly
-
-🛠 Technologies utilisées
-
-Python
-
-Pandas
-
-Matplotlib
-
-Seaborn
-
-Plotly
-
-Jupyter Notebook
-
-💡 Compétences démontrées
-
-Ce projet met en évidence plusieurs compétences en analyse de données :
-
-✔ Nettoyage et préparation de données
-✔ Analyse exploratoire des données (EDA)
-✔ Calcul d’indicateurs statistiques
-✔ Visualisation de données
-✔ Manipulation de datasets avec Python
-
-🔗 Repository : https://github.com/username/marketing-dashboard
-
-Création d’un dashboard interactif permettant de suivre les performances marketing.
-
-Analyse :
-
-trafic web
-
-taux de conversion
-
-performances des campagnes
-
-Outils :
-Power BI / Looker Studio
-
-🔍 Analyse SEO & performance web
-
-🔗 Repository : https://github.com/username/seo-data-analysis
-
-Analyse des performances SEO d’un site web à partir des données Google Search Console.
-
-Objectifs :
-
-identifier les mots-clés performants
-
-analyser le trafic organique
-
-proposer des recommandations SEO
-
-Outils :
-Python • Excel • SEO tools
-
-🧠 Analyse de verbatims clients (NLP)
-
-🔗 Repository : https://github.com/username/customer-feedback-analysis
-
-Analyse de commentaires utilisateurs pour identifier les points de friction dans l’expérience client.
-
-Méthodes :
-
-nettoyage de texte
-
-analyse de sentiments
-
-extraction de thèmes
-
-Outils :
-Python • NLP
 
 💼 Expérience
 Orange — Chargée de Marketing Digital / Voix du Client
