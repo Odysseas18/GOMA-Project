@@ -100,4 +100,3 @@ Python & SQL pour l’analyse de données
 
 📧 odysseas.gomankala@gmail.com
 
-💼 LinkedIn : (ajouter ton lien)
