@@ -131,14 +131,13 @@ Création de contenus et animation des réseaux sociaux
 
 Reporting des données marketing 
 
-CV GOMA Odysseas
 
-🎓 Formation
+Formation
 
-🎓 Master Marketing International — ESCE Business School (2025)
+📊Bootcamp Data analyste
+🎓 Master Marketing International — ESCE Business School
 🎓 Licence Langues Étrangères Appliquées — Université de Reims 
 
-CV GOMA Odysseas
 
 📚 Formation complémentaire :
 
@@ -151,7 +150,6 @@ Python & SQL pour l’analyse de données
 🇪🇸 Espagnol — B2
 🇵🇹 Portugais — notions 
 
-CV GOMA Odysseas
 
 📫 Me contacter
 
