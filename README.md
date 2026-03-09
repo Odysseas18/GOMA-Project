@@ -46,22 +46,135 @@ Pack Office
 📂 Projets Data
 📊 Analyse des données e-commerce
 
-🔗 Repository : https://github.com/username/ecommerce-data-analysis
+🔗 Repository : [https://github.com/username/ecommerce-data-analysis](https://github.com/Odysseas18/GOMA-Project/blob/main/Exercice%20Covid.ipynb)
 
-Analyse d’un dataset e-commerce afin d’identifier les facteurs influençant les ventes.
+Objectif du projet
 
-Objectifs :
+Ce projet consiste à analyser des données mondiales sur la pandémie de COVID-19 afin de comprendre l’évolution du virus dans le temps et son impact dans différents pays.
 
-Nettoyage et exploration des données
+L’objectif est d’explorer plusieurs indicateurs clés comme :
 
-Analyse des comportements clients
+le nombre de cas confirmés
 
-Visualisation des ventes et tendances
+le nombre de décès
 
-Outils :
-Python • Pandas • Matplotlib
+le nombre de guérisons
 
-📈 Dashboard KPI Marketing
+les taux de mortalité et de guérison
+
+Cette analyse permet de mettre en évidence des tendances globales et de comparer l’impact de la pandémie selon les pays.
+
+📂 Jeux de données utilisés
+
+L’analyse repose sur plusieurs datasets contenant des informations sur l’évolution du COVID-19 :
+
+country_wise_latest.csv
+
+covid_19_clean_complete.csv
+
+day_wise.csv
+
+full_grouped.csv
+
+usa_county_wise.csv
+
+Ces jeux de données fournissent des informations sur :
+
+les cas confirmés
+
+les décès
+
+les patients guéris
+
+l’évolution quotidienne de la pandémie
+
+les statistiques par pays et par région
+
+🧹 Nettoyage et préparation des données
+
+Avant l’analyse, plusieurs étapes de data cleaning ont été réalisées :
+
+standardisation des noms de colonnes
+
+conversion des dates au format datetime
+
+vérification et gestion des valeurs manquantes
+
+préparation des données pour l’analyse et la visualisation
+
+Ces étapes permettent d’assurer la qualité et la fiabilité de l’analyse.
+
+🔍 Analyse exploratoire des données (EDA)
+
+Plusieurs axes d’analyse ont été explorés :
+
+Évolution mondiale du COVID-19
+
+Analyse de l’évolution des cas confirmés, des décès et des guérisons dans le temps afin d’observer la progression de la pandémie.
+
+Comparaison entre pays
+
+Identification des pays les plus touchés par la pandémie en termes de :
+
+nombre de cas
+
+nombre de décès
+
+nombre de guérisons
+
+Analyse des indicateurs clés
+
+Calcul de métriques importantes :
+
+Taux de mortalité = décès / cas confirmés
+
+Taux de guérison = guérisons / cas confirmés
+
+Ces indicateurs permettent de mieux comprendre l’impact de la pandémie selon les régions.
+
+📈 Visualisation des données
+
+Différents graphiques ont été réalisés afin de rendre l’analyse plus lisible et intuitive :
+
+évolution des cas dans le temps
+
+comparaison entre pays
+
+visualisation des taux de mortalité et de guérison
+
+graphiques interactifs
+
+Bibliothèques utilisées :
+
+Matplotlib
+
+Seaborn
+
+Plotly
+
+🛠 Technologies utilisées
+
+Python
+
+Pandas
+
+Matplotlib
+
+Seaborn
+
+Plotly
+
+Jupyter Notebook
+
+💡 Compétences démontrées
+
+Ce projet met en évidence plusieurs compétences en analyse de données :
+
+✔ Nettoyage et préparation de données
+✔ Analyse exploratoire des données (EDA)
+✔ Calcul d’indicateurs statistiques
+✔ Visualisation de données
+✔ Manipulation de datasets avec Python
 
 🔗 Repository : https://github.com/username/marketing-dashboard
 
