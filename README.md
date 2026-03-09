@@ -46,7 +46,7 @@ Pack Office
 📂 Projets Data
 📊 Analyse des données e-commerce
 
-🔗 Repository : [https://github.com/username/ecommerce-data-analysis](https://github.com/Odysseas18/GOMA-Project/blob/main/Exercice%20Covid.ipynb)
+🔗 Repository : [https://github.com/Odysseas18/GOMA-Project/blob/main/Exercice%20Covid.ipynb]
 
 Objectif du projet
 
