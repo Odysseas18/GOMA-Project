@@ -1,25 +1,61 @@
+1️⃣ Accueil (Hero section)
+
+GOMA NKALA Odysseas
+Data Analyst
+
+Data analyst en début de carrière, je développe mes compétences en analyse et visualisation de données afin de transformer les données en insights utiles à la prise de décision.
+
+
+2️⃣ À propos de moi
+
 Bonjour,
-Je suis Odysseas GOMA NKALA; titulaire d’un Master en Marketing International, j’ai progressivement orienté mon parcours vers l’analyse de données et la performance business. Mon expérience en SEO, analyse de verbatims clients et optimisation de contenus m’a permis de transformer des données utilisateurs en recommandations stratégiques concrètes. 
 
-Aujourd’hui, je développe mes compétences en Python, SQL et data visualisation afin de concevoir des analyses plus avancées et soutenir la prise de décision data-driven. 
+Je suis Odysseas GOMA NKALA, titulaire d’un Master en Marketing International. Au cours de mon parcours, j’ai progressivement orienté mes compétences vers l’analyse de données et la performance business.
 
-💡 Mon objectif : utiliser la data pour comprendre les comportements utilisateurs et améliorer les performances produits et marketing.
+Mon expérience en SEO, analyse de verbatims clients et optimisation de contenus m’a permis de transformer des données utilisateurs en recommandations stratégiques concrètes.
 
-🚀 Compétences
-Analyse de données
--Python (Pandas, Numpy)
--SQL
--Excel
-Data visualisation
--Power BI
--Looker Studio
--Matplotlib
--Seaborn
+Aujourd’hui, je développe mes compétences en Python, SQL et data visualisation afin de concevoir des analyses plus avancées et soutenir une prise de décision basée sur les données.
 
-Marketing & Analytics
--Google Analytics
--Google Search Console
--SEMrush / Ahrefs
+💡 Mon objectif : utiliser l’analyse de données pour identifier des tendances, générer des insights et soutenir la prise de décision..
+
+
+3️⃣ Compétences
+
+Data Analysis
+
+Python
+
+SQL
+
+Pandas
+
+Numpy
+
+Data Visualization
+
+Power BI
+
+Matplotlib
+
+Seaborn
+
+Data & Analytics Tools
+
+Excel
+
+Google Analytics
+
+Google Search Console
+
+SEMrush / Ahrefs
+
+Gestion de projet
+
+Jira
+
+Trello
+
+Méthodes Agile
 
 📂 Projets Data
 📊 Analyse des données e-commerce
@@ -60,13 +96,11 @@ L’objectif était de transformer des données brutes en indicateurs exploitabl
 💼 Expérience
 Orange — Chargée de Marketing Digital / Voix du Client
 
-Analyse de verbatims utilisateurs pour améliorer l'expérience des applications
+Analyse de verbatims utilisateurs pour améliorer l’expérience des applications
 
 Analyse SEO et performances de recherche
 
-Création de rapports et dashboards Excel pour le suivi des KPIs 
-
-
+Création de rapports et dashboards Excel pour le suivi des KPIs
 
 Lamy Liaisons — Chargée de Marketing
 
@@ -74,18 +108,17 @@ Gestion de campagnes marketing
 
 Création de contenus et animation des réseaux sociaux
 
-Reporting des données marketing 
+Reporting et analyse des données marketing
 
+🎓 Formation
 
-Formation
+📊 Bootcamp Data Analyst
 
-📊Bootcamp Data analyste
 🎓 Master Marketing International — ESCE Business School
-🎓 Licence Langues Étrangères Appliquées — Université de Reims 
 
+🎓 Licence Langues Étrangères Appliquées — Université de Reims
 
-📚 Formation complémentaire :
-
+📚 Formation complémentaire
 Python & SQL pour l’analyse de données
 
 🌍 Langues
@@ -93,10 +126,8 @@ Python & SQL pour l’analyse de données
 🇫🇷 Français — langue maternelle
 🇬🇧 Anglais — B2
 🇪🇸 Espagnol — B2
-🇵🇹 Portugais — notions 
+🇵🇹 Portugais — notions
 
-
-📫 Me contacter
-
+📫 Contact
 📧 odysseas.gomankala@gmail.com
 
