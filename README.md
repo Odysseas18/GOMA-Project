@@ -97,6 +97,7 @@ Technologies : Python, BeautifulSoup, Requests, Pandas
 🛒 Analyse des ventes Amazon – Exploration et visualisation des données [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/notebookamazon.ipynb)
 
 Dans ce projet, j’ai réalisé une analyse exploratoire d’un dataset de ventes Amazon afin d’identifier les tendances de performance commerciale selon les régions et les périodes.
+
 <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/notebookamazon.ipynb">
   <img src="amazon_sales_heatmap.png" width="650">
 </a>
