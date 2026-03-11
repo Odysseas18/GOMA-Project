@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style.css">
 1️⃣ Accueil (Hero section)
 
 GOMA NKALA Odysseas
