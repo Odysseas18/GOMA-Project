@@ -1,5 +1,13 @@
 /* Style général du site */
 
+GOMA-Project
+│
+├── index.html
+├── style.css
+├── images
+│
+└── notebooks
+
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     font-size: 18px;
