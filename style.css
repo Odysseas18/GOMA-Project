@@ -1,74 +1,183 @@
-/* Style général du site */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f7f9fc;
+    color: #222;
+    line-height: 1.7;
     font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-    margin: 40px;
-    background-color: #ffffff;
 }
 
-/* Nom / Titre principal */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
 
 h1 {
-    font-size: 52px;   /* plus grand */
-    font-weight: bold; /* bien en gras */
-    margin-top: 40px;
-    margin-bottom: 20px;
+    font-size: 56px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1f3c88;
+    margin-bottom: 22px;
+    margin-top: 20px;
+}
+
+.hero h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #444;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+strong {
+    font-weight: 800;
     color: #111;
 }
 
-/* Titres des sections */
-
-h2 {
-    font-size: 38px;   /* taille augmentée */
-    font-weight: bold;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    color: #222;
+section {
+    background-color: #ffffff;
+    margin-bottom: 28px;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
 }
 
-/* Titres des projets */
-
-h3 {
-    font-size: 30px;   /* plus grand */
-    font-weight: bold;
-    margin-top: 35px;
-    margin-bottom: 15px;
-    color: #333;
+.intro {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 20px;
 }
 
-/* Texte */
-
-p {
-    font-size: 18px;
-    margin-bottom: 15px;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
 }
 
-/* Listes */
+.skill-card {
+    background-color: #f3f6fb;
+    border-left: 5px solid #1f3c88;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.skill-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #1f3c88;
+}
+
+.project-card,
+.experience-card {
+    background-color: #fdfdfd;
+    border: 1px solid #e8edf5;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 720px;
+    display: block;
+    margin: 16px auto 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+}
 
 ul {
-    font-size: 18px;
-    margin-bottom: 20px;
+    margin-left: 22px;
+    margin-bottom: 18px;
 }
 
-/* Images */
-
-img {
-    margin-top: 15px;
-    margin-bottom: 25px;
-    border-radius: 6px;
+li {
+    margin-bottom: 8px;
 }
 
-/* Liens */
+.simple-list li {
+    margin-bottom: 10px;
+}
 
 a {
-    color: #0066cc;
+    color: #1f3c88;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 24px 16px 40px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p,
+    body {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 24px;
+    }
+
+    .intro {
+        font-size: 18px;
+    }
 }
