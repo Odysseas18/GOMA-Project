@@ -63,8 +63,9 @@ Méthodes Agile
 🔗 Liste analyse de données :
 
 COVID-19 Data Analysis [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/Exercice%20Covid.ipynb)
-<img src="covid_cases_trend.png" width="650">
+
 Analyse exploratoire de données sur la pandémie de COVID-19 afin d'étudier l'évolution des cas, décès et guérisons à l'échelle mondiale.
+<img src="covid_cases_trend.png" width="650">
 
 Technologies : Python, Pandas, Matplotlib, Seaborn, Plotly
 
