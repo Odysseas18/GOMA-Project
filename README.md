@@ -74,12 +74,16 @@ Technologies : Python, Pandas, Matplotlib, Seaborn, Plotly
 🎬 Analyse cinématographique: [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20cin%C3%A9matographique.ipynb)
 
 Exploration d’un dataset de films afin d’identifier les tendances du secteur cinématographique et les caractéristiques des films populaires.
-
+<a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20cin%C3%A9matographique.ipynb">
+  <img src="film_locations_categories.png" width="650">
+</a>
 Technologies : Python, Pandas, Matplotlib, Seaborn
 
 🎥 Analyse du catalogue Netflix : [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20Netflix.ipynb)
 Analyse du catalogue Netflix afin d’identifier les tendances de contenu, les genres dominants et la distribution des films et séries.
-
+<a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20contenu%20audio%20visuel%20Netflix.ipynb">
+  <img src="netflix_top_countries.png" width="650">
+</a>
 Technologies : Python, Pandas, Matplotlib, Seaborn
 
 🏅 Web Scraping – Jeux Olympiques : [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/Scrapping%20donn%C3%A9es%20JO.ipynb)
@@ -91,7 +95,9 @@ Technologies : Python, BeautifulSoup, Requests, Pandas
 🛒 Analyse des ventes Amazon – Exploration et visualisation des données [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/notebookamazon.ipynb)
 
 Dans ce projet, j’ai réalisé une analyse exploratoire d’un dataset de ventes Amazon afin d’identifier les tendances de performance commerciale selon les régions et les périodes.
-
+<a href="https://github.com/Odysseas18/GOMA-Project/blob/main/notebookamazon.ipynb">
+  <img src="amazon_sales_heatmap.png" width="650">
+</a>
 L’objectif était de transformer des données brutes en indicateurs exploitables permettant de mieux comprendre la dynamique des ventes.
 
 
