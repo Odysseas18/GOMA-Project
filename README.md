@@ -1,149 +1,239 @@
-<link rel="stylesheet" href="style.css">
-
-
-1️⃣ Accueil (Hero section)
-
-GOMA NKALA Odysseas
-Data Analyst
-
-Data analyst en début de carrière, je développe mes compétences en analyse et visualisation de données afin de transformer les données en insights utiles à la prise de décision.
-
-
-2️⃣ À propos de moi
-
-Bonjour,
-
-Je suis Odysseas GOMA NKALA, titulaire d’un Master en Marketing International. Au cours de mon parcours, j’ai progressivement orienté mes compétences vers l’analyse de données et la performance business.
-
-Mon expérience en SEO, analyse de verbatims clients et optimisation de contenus m’a permis de transformer des données utilisateurs en recommandations stratégiques concrètes.
-
-Aujourd’hui, je développe mes compétences en Python, SQL et data visualisation afin de concevoir des analyses plus avancées et soutenir une prise de décision basée sur les données.
-
-💡 Mon objectif : utiliser l’analyse de données pour identifier des tendances, générer des insights et soutenir la prise de décision..
-
-
-3️⃣ Compétences
-
-Data Analysis
-
-Python
-
-SQL
-
-Pandas
-
-Numpy
-
-Data Visualization
-
-Power BI
-
-Matplotlib
-
-Seaborn
-
-Data & Analytics Tools
-
-Excel
-
-Google Analytics
-
-Google Search Console
-
-SEMrush / Ahrefs
-
-Gestion de projet
-
-Jira
-
-Trello
-
-Méthodes Agile
-
-📂 Projets Data
-📊 Analyse des données e-commerce
-
-🔗 Liste analyse de données :
-
-COVID-19 Data Analysis [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/Exercice%20Covid.ipynb)
-
-Analyse exploratoire de données sur la pandémie de COVID-19 afin d'étudier l'évolution des cas, décès et guérisons à l'échelle mondiale.
-<a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Exercice%20Covid.ipynb">
-  <img src="covid_cases_trend.png" width="650">
-</a>
-
-Technologies : Python, Pandas, Matplotlib, Seaborn, Plotly
-
-🎬 Analyse cinématographique: [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20cin%C3%A9matographique.ipynb)
-
-Exploration d’un dataset de films afin d’identifier les tendances du secteur cinématographique et les caractéristiques des films populaires.
-<a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20cin%C3%A9matographique.ipynb">
-  <img src="film_locations_categories.png" width="650">
-</a>
-
-Technologies : Python, Pandas, Matplotlib, Seaborn
-
-🎥 Analyse du catalogue Netflix : [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20Netflix.ipynb)
-Analyse du catalogue Netflix afin d’identifier les tendances de contenu, les genres dominants et la distribution des films et séries.
-<a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20contenu%20audio%20visuel%20Netflix.ipynb">
-  <img src="netflix_top_countries.png" width="650">
-</a>
-
-Technologies : Python, Pandas, Matplotlib, Seaborn
-
-🏅 Web Scraping – Jeux Olympiques : [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/Scrapping%20donn%C3%A9es%20JO.ipynb)
-
-Collecte automatisée de données à partir du web afin de construire un dataset sur les Jeux Olympiques.
-
-Technologies : Python, BeautifulSoup, Requests, Pandas
-
-🛒 Analyse des ventes Amazon – Exploration et visualisation des données [Voir l'analyse](https://github.com/Odysseas18/GOMA-Project/blob/main/notebookamazon.ipynb)
-
-Dans ce projet, j’ai réalisé une analyse exploratoire d’un dataset de ventes Amazon afin d’identifier les tendances de performance commerciale selon les régions et les périodes.
-
-<a href="https://github.com/Odysseas18/GOMA-Project/blob/main/notebookamazon.ipynb">
-  <img src="amazon_sales_heatmap.png" width="650">
-</a>
-
-L’objectif était de transformer des données brutes en indicateurs exploitables permettant de mieux comprendre la dynamique des ventes.
-
-
-
-💼 Expérience
-Orange — Chargée de Marketing Digital / Voix du Client
-
-Analyse de verbatims utilisateurs pour améliorer l’expérience des applications
-
-Analyse SEO et performances de recherche
-
-Création de rapports et dashboards Excel pour le suivi des KPIs
-
-Lamy Liaisons — Chargée de Marketing
-
-Gestion de campagnes marketing
-
-Création de contenus et animation des réseaux sociaux
-
-Reporting et analyse des données marketing
-
-🎓 Formation
-
-📊 Bootcamp Data Analyst
-
-🎓 Master Marketing International — ESCE Business School
-
-🎓 Licence Langues Étrangères Appliquées — Université de Reims
-
-📚 Formation complémentaire
-Python & SQL pour l’analyse de données
-
-🌍 Langues
-
-🇫🇷 Français — langue maternelle
-🇬🇧 Anglais — B2
-🇪🇸 Espagnol — B2
-🇵🇹 Portugais — notions
-
-📫 Contact
-📧 odysseas.gomankala@gmail.com
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Data Analyst - Odysseas Goma Nkala</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="hero">
+      <h1>GOMA NKALA Odysseas</h1>
+      <h2>Data Analyst</h2>
+      <p class="intro">
+        Data analyst en début de carrière, je développe mes compétences en
+        <strong>analyse</strong>, <strong>visualisation</strong> et
+        <strong>interprétation de données</strong> afin de transformer les données
+        en <strong>insights utiles à la prise de décision</strong>.
+      </p>
+    </header>
+
+    <section>
+      <h2>À propos de moi</h2>
+      <p>
+        Bonjour, je suis <strong>Odysseas GOMA NKALA</strong>, titulaire d’un
+        <strong>Master en Marketing International</strong>. Au fil de mon parcours,
+        j’ai progressivement orienté mes compétences vers
+        <strong>l’analyse de données</strong> et la
+        <strong>performance business</strong>.
+      </p>
+      <p>
+        Mon expérience en <strong>SEO</strong>,
+        <strong>analyse de verbatims clients</strong> et
+        <strong>optimisation de contenus</strong> m’a permis d’exploiter des données
+        variées, d’identifier des tendances et de formuler des recommandations
+        concrètes pour améliorer l’expérience utilisateur et la performance.
+      </p>
+      <p>
+        Aujourd’hui, je continue de développer mes compétences en
+        <strong>Python</strong>, <strong>SQL</strong>,
+        <strong>Power BI</strong> et <strong>data visualisation</strong> à travers
+        des projets pratiques d’analyse de données. Mon objectif est de mettre la
+        data au service de la compréhension, de l’analyse et de la prise de décision.
+      </p>
+    </section>
+
+    <section>
+      <h2>Compétences</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Analyse de données</h3>
+          <p>Python, SQL, Pandas, NumPy, Excel</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Visualisation de données</h3>
+          <p>Power BI, Matplotlib, Seaborn, Plotly</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Web & Marketing Analytics</h3>
+          <p>Google Analytics, Google Search Console, SEMrush, Ahrefs</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Gestion de projet</h3>
+          <p>Jira, Trello, méthodes Agile, Microsoft Teams</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projets Data</h2>
+
+      <div class="project-card">
+        <h3>Analyse COVID-19</h3>
+        <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Exercice%20Covid.ipynb" target="_blank">
+          <img src="covid_cases_trend.png" alt="Graphique COVID-19" class="project-image">
+        </a>
+        <p>
+          Analyse exploratoire de données sur l’évolution de la pandémie afin
+          d’étudier les cas confirmés, les décès et les guérisons à l’échelle
+          internationale.
+        </p>
+        <p><strong>Travaux réalisés :</strong></p>
+        <ul>
+          <li>nettoyage et préparation des données</li>
+          <li>calcul d’indicateurs comme les taux de mortalité et de guérison</li>
+          <li>visualisation des tendances par pays et dans le temps</li>
+        </ul>
+        <p><strong>Technologies :</strong> Python, Pandas, Matplotlib, Seaborn, Plotly</p>
+        <p>
+          <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Exercice%20Covid.ipynb" target="_blank">
+            Voir l’analyse
+          </a>
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Analyse Netflix</h3>
+        <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20Netflix.ipynb" target="_blank">
+          <img src="netflix_top_countries.png" alt="Analyse Netflix" class="project-image">
+        </a>
+        <p>
+          Projet d’exploration du catalogue Netflix afin d’identifier les pays
+          les plus représentés et de mieux comprendre la distribution des contenus.
+        </p>
+        <p><strong>Travaux réalisés :</strong></p>
+        <ul>
+          <li>exploration du dataset</li>
+          <li>analyse des pays producteurs les plus présents</li>
+          <li>visualisation des principales tendances du catalogue</li>
+        </ul>
+        <p><strong>Technologies :</strong> Python, Pandas, Matplotlib, Seaborn</p>
+        <p>
+          <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20Netflix.ipynb" target="_blank">
+            Voir l’analyse
+          </a>
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Analyse des ventes Amazon</h3>
+        <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/notebookamazon.ipynb" target="_blank">
+          <img src="amazon_sales_heatmap.png" alt="Analyse Amazon" class="project-image">
+        </a>
+        <p>
+          Analyse exploratoire d’un dataset de ventes Amazon afin d’identifier
+          les écarts de performance commerciale selon les régions et les périodes.
+        </p>
+        <p><strong>Travaux réalisés :</strong></p>
+        <ul>
+          <li>exploration et structuration des données</li>
+          <li>analyse comparative par région</li>
+          <li>visualisation des revenus mensuels sous forme de heatmap</li>
+        </ul>
+        <p><strong>Technologies :</strong> Python, Pandas, Matplotlib, Seaborn</p>
+        <p>
+          <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/notebookamazon.ipynb" target="_blank">
+            Voir l’analyse
+          </a>
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Analyse cinématographique</h3>
+        <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20cin%C3%A9matographique.ipynb" target="_blank">
+          <img src="film_locations_categories.png" alt="Analyse cinématographique" class="project-image">
+        </a>
+        <p>
+          Exploration d’un dataset de films afin d’identifier les catégories les
+          plus représentées et mieux comprendre certaines tendances du secteur
+          cinématographique.
+        </p>
+        <p><strong>Travaux réalisés :</strong></p>
+        <ul>
+          <li>nettoyage des données</li>
+          <li>regroupement des catégories de films</li>
+          <li>visualisation des catégories les plus fréquentes</li>
+        </ul>
+        <p><strong>Technologies :</strong> Python, Pandas, Matplotlib, Seaborn</p>
+        <p>
+          <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20cin%C3%A9matographique.ipynb" target="_blank">
+            Voir l’analyse
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Expérience</h2>
+
+      <div class="experience-card">
+        <h3>Orange — Chargée de Marketing Digital / Voix du Client</h3>
+        <ul>
+          <li>Analyse de verbatims utilisateurs pour identifier les points de friction dans les applications</li>
+          <li>Analyse SEO et suivi des performances de recherche</li>
+          <li>Création de rapports et tableaux de bord Excel pour le suivi des KPIs</li>
+          <li>Recommandations d’amélioration basées sur les données utilisateurs</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h3>Lamy Liaisons — Chargée de Marketing</h3>
+        <ul>
+          <li>Gestion de campagnes marketing</li>
+          <li>Création de contenus et animation des réseaux sociaux</li>
+          <li>Reporting et suivi des données marketing</li>
+          <li>Contribution à la performance digitale à travers l’analyse des résultats</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Formation</h2>
+      <ul class="simple-list">
+        <li><strong>Bootcamp Data Analyst — Data Rockstar</strong></li>
+        <li><strong>Master Marketing International — ESCE Business School</strong></li>
+        <li><strong>Licence Langues Étrangères Appliquées — Université de Reims</strong></li>
+      </ul>
+      <p><strong>Formation complémentaire :</strong> Python et SQL pour l’analyse de données</p>
+    </section>
+
+    <section>
+      <h2>Langues</h2>
+      <ul class="simple-list">
+        <li>Français — langue maternelle</li>
+        <li>Anglais — B2</li>
+        <li>Espagnol — B2</li>
+        <li>Portugais — notions</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ce que je recherche</h2>
+      <p>
+        Je souhaite évoluer dans un environnement où je peux mettre à profit mes
+        compétences en <strong>analyse de données</strong> et
+        <strong>visualisation</strong> afin de
+        contribuer à des décisions éclairées et à des projets à impact.
+      </p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p><strong>Email :</strong> odysseas.gomankala@gmail.com</p>
+      <p><strong>GitHub :</strong> <a href="https://github.com/Odysseas18" target="_blank">github.com/Odysseas18</a></p>
+    
+    </section>
+
+  </div>
+
+</body>
+</html>
 
