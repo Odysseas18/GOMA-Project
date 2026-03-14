@@ -86,6 +86,12 @@ section {
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
 }
 
+img:hover{
+transform:scale(1.02);
+transition:0.2s;
+cursor:pointer;
+}
+
 .intro {
     max-width: 850px;
     margin: 0 auto;
