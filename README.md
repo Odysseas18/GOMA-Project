@@ -43,7 +43,7 @@
         <strong>Python</strong>, <strong>SQL</strong>,
         <strong>Power BI</strong> et <strong>data visualisation</strong> à travers
         des projets pratiques d’analyse de données. Mon objectif est de mettre la
-        data au service de la compréhension, de l’analyse et de la prise de décision.
+        data au service de la compréhension des enjeux business et de la prise de décision.
       </p>
     </section>
 
