@@ -86,7 +86,17 @@ section {
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
 }
 
-img:hover{
+.powerbi-image{
+width:100%;
+max-width:750px;
+height:auto;
+display:block;
+margin:20px auto;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+.powerbi-image:hover{
 transform:scale(1.02);
 transition:0.2s;
 cursor:pointer;
