@@ -229,6 +229,9 @@
       <h2>Contact</h2>
       <p><strong>Email :</strong> odysseas.gomankala@gmail.com</p>
       <p><strong>GitHub :</strong> <a href="https://github.com/Odysseas18" target="_blank">github.com/Odysseas18</a></p>
+      <p><strong>LinkedIN :</strong> <a href="https://www.linkedin.com/in/odysseas-goma-a5ba0a1b9/?locale=fr-FR" target="_blank" rel="noopener noreferrer">
+  Odysseas GOMA | LinkedIn
+</a></p>
     
     </section>
 
