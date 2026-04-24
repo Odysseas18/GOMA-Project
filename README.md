@@ -218,10 +218,10 @@
     <section>
       <h2>Ce que je recherche</h2>
       <p>
-        Je souhaite évoluer dans un environnement où je peux mettre à profit mes
-        compétences en <strong>analyse de données</strong> et
-        <strong>visualisation</strong> afin de
-        contribuer à des décisions éclairées et à des projets à impact.
+        Je souhaite intégrer un environnement stimulant et prestigieux 
+        pour poser les fondations de ma trajectoire professionnelle.
+        Mon ambition est de <strong>transformer les données en solutions</strong> concrètes 
+        pour <strong>optimiser la performance</strong> et <strong>piloter des projets d'impact</strong>.
       </p>
     </section>
 
