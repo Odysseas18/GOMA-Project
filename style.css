@@ -3,15 +3,69 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* Style pour la photo de profil */
+/* Structure du Header en deux colonnes */
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* Permet à la ligne de séparation de prendre toute la hauteur */
+    gap: 40px;
+    text-align: left;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Bloc Gauche : Photo et Contacts */
+.hero-left {
+    flex: 0 0 200px; /* Largeur du bloc de gauche */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid #f0f2f5; /* Bloc de séparation vertical */
+    padding-right: 30px;
+}
+
 .profile-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%; /* Rend la photo ronde */
-    object-fit: cover; /* Évite de déformer l'image */
+    width: 140px; /* Image réduite */
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1f3c88;
     margin-bottom: 20px;
-    border: 4px solid #f3f6fb;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-small {
+    text-align: center;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Bloc Droite : Titres et Intro */
+.hero-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Adaptation Mobile */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .hero-left {
+        border-right: none;
+        border-bottom: 2px solid #f0f2f5;
+        padding-right: 0;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
 }
 
 /* Ajustement du header pour centrer les éléments */
