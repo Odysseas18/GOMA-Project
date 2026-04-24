@@ -3,7 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Style pour la photo de profil */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* Rend la photo ronde */
+    object-fit: cover; /* Évite de déformer l'image */
+    margin-bottom: 20px;
+    border: 4px solid #f3f6fb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
+/* Ajustement du header pour centrer les éléments */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 html {
     -webkit-text-size-adjust: 100%;
 }
