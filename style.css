@@ -83,21 +83,21 @@
     }
     .hero-right {
         padding: 30px 20px;
-        text-align: center; /* Garde les titres centrés pour l'esthétique */
+        text-align: center; /* Pour que le Nom et le Titre restent centrés */
     }
-    
-    /* Réduction de la police du Nom/Prénom sur mobile */
+
     .hero-right h1 {
-        font-size: 28px; /* Taille réduite pour mobile */
+        font-size: 28px !important; /* On réduit ton nom */
         line-height: 1.2;
     }
 
-    /* Justification de l'introduction sur mobile */
-    .intro {
-        text-align: justify;
-        hyphens: auto; /* Coupe les mots si nécessaire pour éviter les grands espaces */
-        font-size: 16px; /* Optionnel : légère réduction pour la lisibilité */
+    /* ICI : On force la justification du texte d'intro */
+    .hero-right .intro {
+        text-align: justify !important; 
+        text-justify: inter-word; /* Améliore l'espacement entre les mots */
+        font-size: 16px;
         margin-top: 15px;
+        display: block; /* S'assure que le paragraphe prend toute la largeur */
     }
 }
 /* --- FIN DU NOUVEAU BLOC --- */
