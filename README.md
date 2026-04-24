@@ -15,10 +15,10 @@
       <h1>GOMA NKALA Odysseas</h1>
       <h2>Data Analyst</h2>
       <p class="intro">
-        Data analyst en début de carrière, je développe mes compétences en
-        <strong>analyse</strong>, <strong>visualisation</strong> et
-        <strong>interprétation de données</strong> afin de transformer les données
-        en <strong>insights utiles à la prise de décision</strong>.
+        Analyste de données orientée résultats, je transforme les flux de données complexes 
+        en leviers de performance. Mon approche combine rigueur technique et vision stratégique 
+        pour <strong>diagnostiquer les anomalies</strong>, <strong>résoudre les points de friction business</strong> et <strong>piloter 
+        l'optimisation continue des indicateurs clés</strong>.
       </p>
     </header>
 
