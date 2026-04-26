@@ -129,6 +129,45 @@ body {
     border-radius: 16px;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
 }
+/* Style des nouveaux boutons de contact */
+.contact-info-small {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-email, .btn-linkedin {
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-email {
+    background-color: #1f3c88;
+    color: white !important;
+}
+
+.btn-linkedin {
+    background-color: transparent;
+    color: #1f3c88 !important;
+    border: 2px solid #1f3c88;
+}
+
+.btn-email:hover, .btn-linkedin:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(31, 60, 136, 0.2);
+    text-decoration: none;
+}
+
+/* On ajuste la colonne de gauche du hero pour plus d'espace */
+.hero-left {
+    flex: 0 0 280px; /* Un peu plus large pour les boutons */
+}
 
 h1 {
     font-size: 52px;
