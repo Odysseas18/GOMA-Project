@@ -301,6 +301,77 @@ section {
     border: 1px solid #e2e8f0;
 }
 
+/* Conteneur de la timeline */
+.timeline {
+    position: relative;
+    padding-left: 35px;
+    margin-top: 30px;
+}
+
+/* La ligne verticale grise */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 3px;
+    height: 100%;
+    background-color: #e0e6ed;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* Le petit point bleu sur la ligne */
+.timeline-dot {
+    position: absolute;
+    left: -41px; /* Aligné avec la ligne */
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background-color: #1f3c88;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 3px #1f3c88; /* Effet de double cercle */
+}
+
+.timeline-date {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #64748b;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.timeline-content h3 {
+    font-size: 22px;
+    color: #1f3c88;
+    margin-bottom: 12px;
+}
+
+.timeline-content ul {
+    list-style-type: none; /* On retire les puces classiques */
+    padding-left: 0;
+}
+
+.timeline-content li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* On remplace les puces par des petits traits stylisés */
+.timeline-content li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #1f3c88;
+    font-weight: bold;
+}
+
 /* --- ADAPTATION MOBILE (MEDIA QUERY) --- */
 @media (max-width: 768px) {
     .projects-grid {
