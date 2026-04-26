@@ -1,289 +1,1048 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Data Analyst - Odysseas Goma Nkala</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Odysseas GOMA NKALA — Data Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,600;9..144,1,400;9..144,1,600&display=swap" rel="stylesheet"/>
+  <style>
+    /* ═══════════════════════════════
+       VARIABLES & RESET
+    ═══════════════════════════════ */
+    :root {
+      --bg:         #fdfaf8;
+      --bg-alt:     #fff8f5;
+      --surface:    #ffffff;
+      --rose:       #e8614a;
+      --rose-hover: #d4523d;
+      --rose-pale:  #fde8e3;
+      --coral:      #f4a58a;
+      --peach:      #fbd5c8;
+      --sand:       #f5ede8;
+      --text:       #1e1610;
+      --text-mid:   #5c4033;
+      --text-muted: #a08070;
+      --border:     #edddd6;
+      --radius-sm:  10px;
+      --radius-md:  16px;
+      --radius-lg:  24px;
+      --shadow-sm:  0 2px 12px rgba(232,97,74,0.07);
+      --shadow-md:  0 6px 30px rgba(232,97,74,0.12);
+      --shadow-lg:  0 16px 60px rgba(232,97,74,0.16);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    ul { list-style: none; }
+
+    /* ═══════════════════════════════
+       NAVIGATION
+    ═══════════════════════════════ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 999;
+      height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6%;
+      background: rgba(253, 250, 248, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .nav-logo span { color: var(--rose); font-style: italic; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+    }
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover { color: var(--rose); }
+
+    .nav-btn {
+      background: var(--rose);
+      color: #fff !important;
+      padding: 9px 22px;
+      border-radius: 100px;
+      font-weight: 600 !important;
+      font-size: 0.875rem !important;
+      transition: background 0.2s ease, transform 0.2s ease !important;
+      box-shadow: 0 4px 14px rgba(232,97,74,0.3);
+    }
+    .nav-btn:hover {
+      background: var(--rose-hover) !important;
+      transform: translateY(-1px);
+      color: #fff !important;
+    }
+
+    /* ═══════════════════════════════
+       HERO
+    ═══════════════════════════════ */
+    #hero {
+      min-height: 100vh;
+      padding: 110px 6% 80px;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(160deg, #fff8f5 0%, #fdfaf8 45%, #fff2ed 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(244,165,138,0.16) 0%, transparent 65%);
+      top: -200px; right: -150px;
+      pointer-events: none;
+    }
+    #hero::after {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,97,74,0.07) 0%, transparent 65%);
+      bottom: -100px; left: 0;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .hero-photo-col { display: flex; justify-content: center; }
+
+    .hero-photo-frame {
+      width: 300px;
+      height: 300px;
+      border-radius: 40% 60% 55% 45% / 45% 45% 55% 55%;
+      background: linear-gradient(135deg, var(--peach) 0%, var(--rose-pale) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: morphShape 10s ease-in-out infinite;
+      box-shadow: 0 20px 60px rgba(232,97,74,0.2);
+      flex-shrink: 0;
+    }
+
+    @keyframes morphShape {
+      0%,100% { border-radius: 40% 60% 55% 45% / 45% 45% 55% 55%; }
+      33%      { border-radius: 55% 45% 40% 60% / 55% 40% 60% 45%; }
+      66%      { border-radius: 45% 55% 60% 40% / 40% 60% 45% 55%; }
+    }
+
+    .hero-photo {
+      width: 272px;
+      height: 272px;
+      border-radius: 40% 60% 55% 45% / 45% 45% 55% 55%;
+      object-fit: cover;
+      object-position: center top;
+      border: 4px solid rgba(255,255,255,0.85);
+      animation: morphShape 10s ease-in-out infinite;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--rose-pale);
+      border: 1px solid rgba(232,97,74,0.2);
+      color: var(--rose);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 1.6rem;
+    }
+    .hero-badge-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--rose);
+      animation: blink 2s ease-in-out infinite;
+    }
+    @keyframes blink {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: 0.35; transform: scale(0.7); }
+    }
+
+    .hero-name {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 600;
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+    .hero-name em {
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      max-width: 490px;
+      margin-bottom: 2.2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 28px;
+      border-radius: 100px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      text-decoration: none;
+    }
+    .btn-rose {
+      background: var(--rose);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(232,97,74,0.32);
+    }
+    .btn-rose:hover {
+      background: var(--rose-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(232,97,74,0.4);
+    }
+    .btn-ghost {
+      background: var(--surface);
+      color: var(--text);
+      border: 1.5px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-ghost:hover {
+      border-color: var(--rose);
+      color: var(--rose);
+      transform: translateY(-2px);
+    }
+
+    .hero-kpis {
+      display: flex;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+    .hero-kpi {
+      display: flex;
+      flex-direction: column;
+      padding: 0 2rem 0 0;
+      margin: 0 2rem 0 0;
+      border-right: 1px solid var(--border);
+    }
+    .hero-kpi:last-child {
+      border-right: none;
+      padding-right: 0;
+      margin-right: 0;
+    }
+    .kpi-number {
+      font-family: 'Fraunces', serif;
+      font-size: 1.9rem;
+      font-weight: 600;
+      color: var(--rose);
+      line-height: 1;
+    }
+    .kpi-label {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ═══════════════════════════════
+       SECTIONS COMMUNES
+    ═══════════════════════════════ */
+    section { padding: 88px 6%; }
+
+    .section-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 0.55rem;
+    }
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 22px; height: 2px;
+      background: var(--rose);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 3rem;
+    }
+    .section-title em {
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    /* ═══════════════════════════════
+       COMPÉTENCES
+    ═══════════════════════════════ */
+    #competences { background: var(--bg-alt); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.6rem;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .skill-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .skill-icon {
+      width: 46px; height: 46px;
+      border-radius: 12px;
+      background: var(--rose-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .skill-card h3 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.85rem;
+    }
+
+    .tag-group { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.73rem;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 100px;
+      background: var(--sand);
+      color: var(--text-mid);
+      border: 1px solid var(--border);
+    }
+
+    /* ═══════════════════════════════
+       PROJETS
+    ═══════════════════════════════ */
+    #projets { background: var(--bg); }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .project-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-5px);
+    }
+
+    .project-thumb {
+      height: 196px;
+      overflow: hidden;
+      background: var(--sand);
+    }
+    .project-thumb img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+    .project-card:hover .project-thumb img { transform: scale(1.05); }
+
+    .project-body {
+      padding: 1.4rem 1.5rem 1.6rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-cat {
+      font-size: 0.69rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 0.45rem;
+    }
+
+    .project-body h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    .project-body p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.62;
+      flex: 1;
+      margin-bottom: 1.2rem;
+    }
+
+    .project-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tech-group { display: flex; flex-wrap: wrap; gap: 5px; }
+
+    .tech-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: var(--rose-pale);
+      color: var(--rose);
+      border: 1px solid rgba(232,97,74,0.18);
+    }
+
+    .project-link {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--rose);
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      transition: opacity 0.2s;
+    }
+    .project-link:hover { opacity: 0.7; text-decoration: underline; }
+
+    /* ═══════════════════════════════
+       EXPÉRIENCE
+    ═══════════════════════════════ */
+    #experience { background: var(--bg-alt); }
+
+    .timeline { position: relative; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 12px; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--rose), var(--coral), var(--peach), transparent);
+      border-radius: 2px;
+    }
+
+    .tl-item {
+      position: relative;
+      padding-left: 3rem;
+      padding-bottom: 3.5rem;
+    }
+    .tl-item:last-child { padding-bottom: 0; }
+
+    .tl-dot {
+      position: absolute;
+      left: -6px; top: 10px;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: var(--rose);
+      border: 3px solid var(--bg-alt);
+      box-shadow: 0 0 0 3px rgba(232,97,74,0.2);
+    }
+
+    .tl-date {
+      font-size: 0.77rem;
+      font-weight: 700;
+      color: var(--rose);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.35rem;
+    }
+
+    .tl-item h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.22rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .kpi-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.3rem;
+    }
+    .kpi-chip {
+      background: var(--rose-pale);
+      border: 1px solid rgba(232,97,74,0.2);
+      border-radius: var(--radius-sm);
+      padding: 10px 18px;
+      text-align: center;
+    }
+    .kpi-chip strong {
+      display: block;
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--rose);
+      line-height: 1;
+    }
+    .kpi-chip span {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+      display: block;
+    }
+
+    .tl-list li {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      padding: 5px 0 5px 1.3rem;
+      position: relative;
+      line-height: 1.62;
+    }
+    .tl-list li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--coral);
+    }
+    .tl-list li strong { color: var(--text); }
+
+    /* ═══════════════════════════════
+       FORMATION
+    ═══════════════════════════════ */
+    #formation { background: var(--bg); }
+
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .edu-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .edu-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .edu-icon {
+      width: 46px; height: 46px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      background: var(--rose-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .edu-info h4 {
+      font-size: 0.93rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+    .edu-info p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ═══════════════════════════════
+       LANGUES
+    ═══════════════════════════════ */
+    #langues { background: var(--bg-alt); }
+
+    .lang-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .lang-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.1rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      min-width: 145px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .lang-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .lang-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .lang-level {
+      font-size: 0.77rem;
+      font-weight: 600;
+      color: var(--rose);
+    }
+
+    /* ═══════════════════════════════
+       CONTACT
+    ═══════════════════════════════ */
+    #contact {
+      background: linear-gradient(150deg, #fff3ef 0%, #fdfaf8 60%, #fff8f5 100%);
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 580px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.5rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-box p {
+      font-size: 1rem;
+      color: var(--text-mid);
+      line-height: 1.72;
+      margin-bottom: 2.2rem;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ═══════════════════════════════
+       FOOTER
+    ═══════════════════════════════ */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 1.8rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ═══════════════════════════════
+       ANIMATIONS SCROLL
+    ═══════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ═══════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════ */
+    @media (max-width: 860px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+      }
+      .hero-photo-col { order: -1; }
+      .hero-desc { margin-left: auto; margin-right: auto; }
+      .hero-buttons { justify-content: center; }
+      .hero-kpis { justify-content: center; }
+      .hero-kpi { border-right: none; padding-right: 1.2rem; margin-right: 0; border-bottom: none; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      nav { padding: 0 5%; }
+      section { padding: 60px 5%; }
+      .hero-photo-frame, .hero-photo { width: 230px; height: 230px; }
+    }
+  </style>
 </head>
 <body>
- <nav class="navbar"> <div class="nav-container">
-        <a href="#projets" class="nav-link">Projets</a>
-        <a href="#experience" class="nav-link">Expérience</a>
-        <a href="#formation" class="nav-link">Formation</a> 
-        <a href="mailto:odysseas.gomankala@gmail.com" class="nav-link contact-nav">Contact</a>
-    </div>
-</nav>
 
-  <div class="container">
+  <nav>
+    <a href="#hero" class="nav-logo">Odysseas <span>GN</span></a>
+    <ul class="nav-links">
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#experience">Expérience</a></li>
+      <li><a href="#formation">Formation</a></li>
+      <li><a href="#contact" class="nav-btn">Me contacter</a></li>
+    </ul>
+  </nav>
 
-    
-    <header class="hero">
-    <div class="hero-left">
-        <img src="Photo_pro.jpeg" alt="Odysseas GOMA NKALA" class="profile-img">
-        <div class="contact-info-small">
-    <a href="mailto:odysseas.gomankala@gmail.com" class="btn-email"> Me contacter</a>
-    <a href="https://www.linkedin.com/in/odysseas-goma-a5ba0a1b9/?locale=fr-FR" target="_blank" class="btn-linkedin">LinkedIn</a>
-</div>
-    </div>
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-photo-col reveal">
+        <div class="hero-photo-frame">
+          <img src="https://raw.githubusercontent.com/Odysseas18/GOMA-Project/main/Photo_pro.jpeg" alt="Odysseas GOMA NKALA" class="hero-photo"/>
+        </div>
+      </div>
 
-    <div class="hero-right">
-        <h1>GOMA NKALA Odysseas</h1>
-        <h2 style="color: #444; font-size: 24px; margin-bottom: 15px;">Data Analyst</h2>
-        <p class="intro" style="margin: 0; font-size: 18px;">
-            Analyste de données orientée résultats, je transforme les flux de données complexes 
-            en leviers de performance. Mon approche combine rigueur technique et vision stratégique 
-            pour <strong>diagnostiquer les anomalies</strong>, <strong>résoudre les points de friction business</strong> et <strong>piloter 
-            l'optimisation continue des indicateurs clés</strong>.
+      <div class="hero-text-col reveal">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          Ouverte aux opportunités
+        </div>
+
+        <h1 class="hero-name">
+          GOMA NKALA<br>
+          <em>Odysseas</em>
+        </h1>
+
+        <p class="hero-desc">
+          Data Analyst orientée résultats — je transforme des données complexes en leviers de performance concrets. Python · SQL · Power BI · Marketing Analytics.
         </p>
+
+        <div class="hero-buttons">
+          <a href="mailto:odysseas.gomankala@gmail.com" class="btn btn-rose">✉ Me contacter</a>
+          <a href="https://www.linkedin.com/in/odysseas-goma-a5ba0a1b9/" target="_blank" class="btn btn-ghost">LinkedIn →</a>
+        </div>
+
+        <div class="hero-kpis">
+          <div class="hero-kpi">
+            <span class="kpi-number">+138%</span>
+            <span class="kpi-label">clics SEO chez Orange</span>
+          </div>
+          <div class="hero-kpi">
+            <span class="kpi-number">1 562</span>
+            <span class="kpi-label">verbatims analysés</span>
+          </div>
+          <div class="hero-kpi">
+            <span class="kpi-number">5</span>
+            <span class="kpi-label">projets data</span>
+          </div>
+        </div>
+      </div>
     </div>
-</header>
+  </section>
 
-      
-
-    <section>
-      <h2>À propos de moi</h2>
-      <p>
-        Bonjour, je suis <strong>Odysseas GOMA NKALA</strong>, titulaire d’un
-        <strong>Master en Marketing International</strong>. Au fil de mon parcours,
-        j’ai progressivement orienté mes compétences vers
-        <strong>l’analyse de données</strong> et la
-        <strong>performance business</strong>.
-      </p>
-      <p>
-        Mon expérience en <strong>SEO</strong>,
-        <strong>analyse de verbatims clients</strong> et
-        <strong>optimisation de contenus</strong> m’a permis d’exploiter des données
-        variées, d’identifier des tendances et de formuler des recommandations
-        concrètes pour améliorer l’expérience utilisateur et la performance.
-      </p>
-      <p>
-        Aujourd’hui, je continue de développer mes compétences en
-        <strong>Python</strong>, <strong>SQL</strong>,
-        <strong>Power BI</strong> et <strong>data visualisation</strong> à travers
-        des projets pratiques d’analyse de données. Mon objectif est de mettre la
-        data au service de la compréhension des enjeux business et de la prise de décision.
-      </p>
-    </section>
-
-    <section>
-      <h2>Compétences</h2>
-
+  <section id="competences">
+    <div class="section-wrap">
+      <div class="eyebrow reveal">Stack technique</div>
+      <h2 class="section-title reveal">Mes <em>compétences</em></h2>
       <div class="skills-grid">
-        <div class="skill-card">
+        <div class="skill-card reveal">
+          <div class="skill-icon">📊</div>
           <h3>Analyse de données</h3>
-          <p>Python, SQL, Pandas, NumPy, Excel</p>
+          <div class="tag-group">
+            <span class="tag">Python</span><span class="tag">SQL</span>
+            <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Excel</span>
+          </div>
         </div>
-
-        <div class="skill-card">
+        <div class="skill-card reveal">
+          <div class="skill-icon">📈</div>
           <h3>Visualisation de données</h3>
-          <p>Power BI, Matplotlib, Seaborn, Plotly</p>
+          <div class="tag-group">
+            <span class="tag">Power BI</span><span class="tag">Matplotlib</span>
+            <span class="tag">Seaborn</span><span class="tag">Plotly</span>
+          </div>
         </div>
-
-        <div class="skill-card">
+        <div class="skill-card reveal">
+          <div class="skill-icon">🔍</div>
           <h3>Web & Marketing Analytics</h3>
-          <p>Google Analytics, Google Search Console, SEMrush, Ahrefs</p>
+          <div class="tag-group">
+            <span class="tag">Google Analytics</span><span class="tag">Search Console</span>
+            <span class="tag">SEMrush</span><span class="tag">Ahrefs</span>
+          </div>
         </div>
-
-        <div class="skill-card">
+        <div class="skill-card reveal">
+          <div class="skill-icon">⚙️</div>
           <h3>Gestion de projet</h3>
-          <p>Jira, Trello, méthodes Agile, Microsoft Teams</p>
+          <div class="tag-group">
+            <span class="tag">Jira</span><span class="tag">Trello</span>
+            <span class="tag">Agile</span><span class="tag">MS Teams</span>
+          </div>
         </div>
       </div>
-    </section>
-     
-    <section>
-      <h2>Expertise & Objectifs</h2>
-      <p>
-        Dédiée à la valorisation des données et à l'optimisation des KPIs, je combine expertise technique (Python, SQL)
-        et vision métier pour apporter des solutions concrètes aux problématiques de performance.
-      </p>
-    </section>
-
-    <section id="projets">
-  <h2>Projets Data</h2>
-  
-  <div class="projects-grid">
-
-    <div class="project-card">
-      <div class="project-tag">Business Intelligence</div>
-      <h3>Analyse des ventes Power BI</h3>
-      <a href="https://github.com/Odysseas18/GOMA-Project/raw/main/Rapport_vente_formations.pbix" download>
-        <img src="rapport_ventes.png" class="project-image">
-      </a>
-      <p>Nettoyage via Power Query et création de mesures DAX pour le pilotage des ventes régionales.</p>
-      <div class="tech-stack">
-        <span>Power BI</span> <span>DAX</span> <span>Power Query</span>
-      </div>
     </div>
+  </section>
 
-    <div class="project-card">
-      <div class="project-tag">Data Analysis</div>
-      <h3>Analyse COVID-19</h3>
-      <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Exercice%20Covid.ipynb" target="_blank">
-        <img src="covid_cases_trend.png" class="project-image">
-      </a>
-      <p>Étude exploratoire des taux de mortalité et tendances internationales avec visualisations interactives.</p>
-      <div class="tech-stack">
-        <span>Python</span> <span>Pandas</span> <span>Plotly</span>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-tag">Market Analysis</div>
-      <h3>Analyse Netflix</h3>
-      <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20Netflix.ipynb" target="_blank">
-        <img src="netflix_top_countries.png" class="project-image">
-      </a>
-      <p>Exploration du catalogue pour identifier la distribution des contenus par pays et les tendances majeures.</p>
-      <div class="tech-stack">
-        <span>Python</span> <span>Matplotlib</span> <span>Seaborn</span>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-tag">E-commerce Insights</div>
-      <h3>Analyse des ventes Amazon</h3>
-      <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/notebookamazon.ipynb" target="_blank">
-        <img src="amazon_sales_heatmap.png" class="project-image">
-      </a>
-      <p>Analyse de performance commerciale par région et visualisation des revenus via Heatmap.</p>
-      <div class="tech-stack">
-        <span>Python</span> <span>Data Viz</span> <span>Heatmaps</span>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-tag">Exploratory Data Analysis</div>
-      <h3>Analyse Cinématographique</h3>
-      <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20cin%C3%A9matographique.ipynb" target="_blank">
-        <img src="film_locations_categories.png" class="project-image">
-      </a>
-      <p>Regroupement de catégories et analyse des fréquences pour comprendre les tendances du secteur.</p>
-      <div class="tech-stack">
-        <span>Python</span> <span>Pandas</span> <span>Nettoyage</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-    <section id="experience">
-    <h2>Expérience Professionnelle</h2>
-    <div class="timeline">
-        
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <span class="timeline-date">2022 - 2023</span>
-                <h3>Orange — Digital Data Analyst & SEO</h3>
-                
-                <div class="kpi-container">
-                    <div class="kpi-card">
-                        <span class="kpi-value">+138%</span>
-                        <span class="kpi-label">de clics SEO</span>
-                    </div>
-                    <div class="kpi-card">
-                        <span class="kpi-value">+99k</span>
-                        <span class="kpi-label">vues YouTube</span>
-                    </div>
-                    <div class="kpi-card">
-                        <span class="kpi-value">1,5k+</span>
-                        <span class="kpi-label">verbatims analysés</span>
-                    </div>
-                </div>
-
-                <ul>
-                    <li><strong>Pilotage Data :</strong> Analyse sémantique de 1 562 commentaires clients pour identifier les points de friction sur les apps MySosh et Orange et moi.</li>
-                    <li><strong>Performance SEO :</strong> Optimisation de pages stratégiques (ex: Page "Mes documents") générant une hausse de +138,09% des clics.</li>
-                    <li><strong>Insight Business :</strong> Analyse comparative révélant une hausse de +36% de la satisfaction client globale entre février et mars 2024.</li>
-                </ul>
+  <section id="projets">
+    <div class="section-wrap">
+      <div class="eyebrow reveal">Travaux personnels</div>
+      <h2 class="section-title reveal">Mes <em>projets</em></h2>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-thumb"><img src="https://raw.githubusercontent.com/Odysseas18/GOMA-Project/main/rapport_ventes.png" alt="Analyse ventes Power BI"/></div>
+          <div class="project-body">
+            <div class="project-cat">Business Intelligence</div>
+            <h3>Analyse des ventes — Power BI</h3>
+            <p>Nettoyage via Power Query et création de mesures DAX pour le pilotage des ventes régionales.</p>
+            <div class="project-foot">
+              <div class="tech-group">
+                <span class="tech-tag">Power BI</span><span class="tech-tag">DAX</span>
+              </div>
+              <a href="https://github.com/Odysseas18/GOMA-Project/raw/main/Rapport_vente_formations.pbix" target="_blank" class="project-link">Voir →</a>
             </div>
+          </div>
         </div>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <span class="timeline-date">2021 - 2022</span>
-                <h3>Lamy Liaisons — Chargée de Marketing Digital</h3>
-                
-                <div class="kpi-container">
-                    <div class="kpi-card">
-                        <span class="kpi-value">Multi-leviers</span>
-                        <span class="kpi-label">Gestion de campagnes</span>
-                    </div>
-                    <div class="kpi-card">
-                        <span class="kpi-value">Dashboards</span>
-                        <span class="kpi-label">Suivi de performance</span>
-                    </div>
-                </div>
-
-                <ul>
-                    <li><strong>Growth Marketing :</strong> Gestion opérationnelle de campagnes marketing multi-canaux pour booster l'acquisition digitale.</li>
-                    <li><strong>Data Reporting :</strong> Conception de tableaux de bord de suivi pour piloter les KPIs et optimiser le ROI des actions.</li>
-                    <li><strong>Analyse stratégique :</strong> Reporting hebdomadaire des résultats pour orienter les futures campagnes de marketing direct.</li>
-                </ul>
+        <div class="project-card reveal">
+          <div class="project-thumb"><img src="https://raw.githubusercontent.com/Odysseas18/GOMA-Project/main/covid_cases_trend.png" alt="Analyse COVID-19"/></div>
+          <div class="project-body">
+            <div class="project-cat">Data Analysis</div>
+            <h3>Analyse COVID-19</h3>
+            <p>Étude exploratoire des taux de mortalité et tendances internationales avec visualisations interactives.</p>
+            <div class="project-foot">
+              <div class="tech-group">
+                <span class="tech-tag">Python</span><span class="tech-tag">Plotly</span>
+              </div>
+              <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Exercice%20Covid.ipynb" target="_blank" class="project-link">Voir →</a>
             </div>
+          </div>
         </div>
 
+        <div class="project-card reveal">
+          <div class="project-thumb"><img src="https://raw.githubusercontent.com/Odysseas18/GOMA-Project/main/netflix_top_countries.png" alt="Analyse Netflix"/></div>
+          <div class="project-body">
+            <div class="project-cat">Market Analysis</div>
+            <h3>Analyse Netflix</h3>
+            <p>Exploration du catalogue pour identifier la distribution des contenus par pays et tendances majeures.</p>
+            <div class="project-foot">
+              <div class="tech-group">
+                <span class="tech-tag">Python</span><span class="tech-tag">Seaborn</span>
+              </div>
+              <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20Netflix.ipynb" target="_blank" class="project-link">Voir →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-thumb"><img src="https://raw.githubusercontent.com/Odysseas18/GOMA-Project/main/amazon_sales_heatmap.png" alt="Analyse Amazon"/></div>
+          <div class="project-body">
+            <div class="project-cat">E-commerce Insights</div>
+            <h3>Analyse des ventes Amazon</h3>
+            <p>Visualisation des revenus via Heatmap pour identifier les marchés prioritaires.</p>
+            <div class="project-foot">
+              <div class="tech-group">
+                <span class="tech-tag">Python</span><span class="tech-tag">Heatmaps</span>
+              </div>
+              <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/notebookamazon.ipynb" target="_blank" class="project-link">Voir →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-thumb"><img src="https://raw.githubusercontent.com/Odysseas18/GOMA-Project/main/film_locations_categories.png" alt="Analyse cinématographique"/></div>
+          <div class="project-body">
+            <div class="project-cat">Exploratory Data Analysis</div>
+            <h3>Analyse Cinématographique</h3>
+            <p>Analyse des fréquences pour comprendre les patterns du secteur cinématographique.</p>
+            <div class="project-foot">
+              <div class="tech-group">
+                <span class="tech-tag">Python</span><span class="tech-tag">Pandas</span>
+              </div>
+              <a href="https://github.com/Odysseas18/GOMA-Project/blob/main/Analyse%20cin%C3%A9matographique.ipynb" target="_blank" class="project-link">Voir →</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
-</section>
+  </section>
 
-    <section id="formation">
-    <h2>Formation</h2>
-    <div class="timeline">
-        
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <span class="timeline-date">2025</span>
-                <h3>Bootcamp Data Analyst — Data Rockstar</h3>
-                <p>Spécialisation intensive sur le stack technique du Data Analyst :</p>
-                <div class="tech-stack">
-                    <span>Python (Pandas)</span>
-                    <span>SQL</span>
-                    <span>Power BI</span>
-                    <span>Machine Learning</span>
-                </div>
-            </div>
+  <section id="experience">
+    <div class="section-wrap">
+      <div class="eyebrow reveal">Parcours</div>
+      <h2 class="section-title reveal">Expérience <em>professionnelle</em></h2>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2022 – 2023</div>
+          <h3>Orange — Digital Data Analyst & SEO</h3>
+          <div class="kpi-row">
+            <div class="kpi-chip"><strong>+138%</strong><span>clics SEO</span></div>
+            <div class="kpi-chip"><strong>+99k</strong><span>vues YouTube</span></div>
+            <div class="kpi-chip"><strong>1 562</strong><span>verbatims</span></div>
+          </div>
+          <ul class="tl-list">
+            <li><strong>Pilotage Data :</strong> Analyse sémantique pour identifier les frictions sur les apps.</li>
+            <li><strong>Performance SEO :</strong> Optimisation stratégique des clics organiques.</li>
+          </ul>
         </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <span class="timeline-date">2025</span>
-                <h3>Master Marketing International — ESCE Business School</h3>
-                <p>Focus sur la stratégie d'entreprise, l'analyse de marché et le pilotage de la performance commerciale à l'international.</p>
-            </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2021 – 2022</div>
+          <h3>Lamy Liaisons — Chargée de Marketing Digital</h3>
+          <ul class="tl-list">
+            <li><strong>Growth Marketing :</strong> Gestion de campagnes multi-canaux.</li>
+            <li><strong>Data Reporting :</strong> Conception de tableaux de bord ROI.</li>
+          </ul>
         </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <span class="timeline-date">2018 - 2021</span>
-                <h3>Licence Langues Étrangères Appliquées — Université de Reims</h3>
-                <p>Anglais et Espagnol appliqués au business et au droit. Développement d'une forte capacité d'adaptation interculturelle.</p>
-            </div>
-        </div>
-
+      </div>
     </div>
-</section>
+  </section>
 
-    <section>
-      <h2>Langues</h2>
-      <ul class="simple-list">
-        <li>Anglais — B2 courant</li>
-        <li>Espagnol — B2</li>
-        <li>Portugais — notions</li>
-        <li>Français — langue maternelle</li>
-      </ul>
-    </section>
+  <section id="formation">
+    <div class="section-wrap">
+      <div class="eyebrow reveal">Académique</div>
+      <h2 class="section-title reveal">Ma <em>formation</em></h2>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-icon">🚀</div>
+          <div class="edu-info">
+            <h4>Bootcamp Data Analyst</h4>
+            <p>Data Rockstar — Python, SQL</p>
+          </div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-info">
+            <h4>Master Marketing International</h4>
+            <p>ESCE Business School</p>
+          </div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-icon">📚</div>
+          <div class="edu-info">
+            <h4>Licence LEA</h4>
+            <p>Université de Reims</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-   
+  <section id="langues">
+    <div class="section-wrap">
+      <div class="eyebrow reveal">Communication</div>
+      <h2 class="section-title reveal">Mes <em>langues</em></h2>
+      <div class="lang-row">
+        <div class="lang-card reveal"><span class="lang-name">🇫🇷 Français</span><span class="lang-level">Maternel</span></div>
+        <div class="lang-card reveal"><span class="lang-name">🇬🇧 Anglais</span><span class="lang-level">B2</span></div>
+        <div class="lang-card reveal"><span class="lang-name">🇪🇸 Espagnol</span><span class="lang-level">B2</span></div>
+        <div class="lang-card reveal"><span class="lang-name">🇵🇹 Portugais</span><span class="lang-level">Notions</span></div>
+      </div>
+    </div>
+  </section>
 
-    
+  <section id="contact">
+    <div class="section-wrap">
+      <div class="eyebrow reveal" style="justify-content:center;">Travaillons ensemble</div>
+      <h2 class="section-title reveal" style="text-align:center;">Prêt à donner du sens à vos <em>données ?</em></h2>
+      <div class="contact-box reveal">
+        <p>Je suis actuellement à la recherche de nouvelles opportunités en tant que Data Analyst.</p>
+        <div class="contact-buttons">
+          <a href="mailto:odysseas.gomankala@gmail.com" class="btn btn-rose">✉ m'envoyer un email</a>
+          <a href="https://www.linkedin.com/in/odysseas-goma-a5ba0a1b9/" target="_blank" class="btn btn-ghost">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <footer>
+    <p>© 2024 Odysseas GOMA NKALA — Développé avec passion</p>
+  </footer>
+
+  <script>
+    // Animation au scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
