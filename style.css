@@ -47,17 +47,20 @@ section {
 /* =========================================
    2. BARRE DE NAVIGATION (Menu Fixe)
    ========================================= */
+/* 1. On prépare le terrain pour le sticky */
 html, body {
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
-    height: auto;
-    position: relative;
 }
+
+/* 2. La barre de navigation fixe */
 .navbar {
-    position: -webkit-sticky; /* Pour iPhone/Safari */
+    position: -webkit-sticky; /* Pour Safari */
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 9999; /* Pour passer devant les images et les titres */
+    z-index: 9999; /* Pour rester au-dessus de tout */
     background-color: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #e0e6ed;
@@ -65,16 +68,27 @@ html, body {
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* 3. Ajustement important pour le container mobile */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 12px 0;
-    }
-    .nav-container {
-        gap: 15px;
-    }
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
 }
 
+/* 3. Adaptation mobile */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+    }
+    .nav-container {
+        gap: 15px; /* Plus serré sur mobile pour que tout tienne */
+    }
+    .nav-link {
+        font-size: 14px;
+    }
+}
 .nav-container {
     max-width: 1100px;
     margin: 0 auto;
