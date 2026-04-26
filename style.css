@@ -5,20 +5,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    -webkit-text-size-adjust: 100%;
-    scroll-behavior: smooth;
+html, body {
+    margin: 0;
+    padding: 0;
+    /* On retire tout overflow restrictif ici */
+    width: 100%;
+    min-height: 100%;
 }
 
 body {
-    font-family: "Segoe UI", Roboto, Arial, sans-serif;
-    background-color: #f7f9fc;
-    color: #222;
-    line-height: 1.7;
-    font-size: 18px;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Seul celui-ci est autorisé pour éviter le scroll horizontal */
+    position: relative; 
 }
 
 .container {
@@ -41,16 +38,15 @@ section {
    2. BARRE DE NAVIGATION (Menu Fixe)
    ========================================= */
 .navbar {
-    position: -webkit-sticky;
+    position: -webkit-sticky; /* Pour Safari */
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 9999;
-    background-color: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
+    background-color: #ffffff !important; /* Force le blanc pour être sûr qu'il ne soit pas transparent */
     border-bottom: 1px solid #e0e6ed;
     padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .nav-container {
