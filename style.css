@@ -5,17 +5,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-html, body {
-    margin: 0;
-    padding: 0;
-    /* On retire tout overflow restrictif ici */
-    width: 100%;
-    min-height: 100%;
+/* Assure-toi que ces propriétés sont exactement comme ça */
+html {
+    scroll-behavior: smooth;
+    height: 100%; /* Important */
 }
 
 body {
-    overflow-x: hidden; /* Seul celui-ci est autorisé pour éviter le scroll horizontal */
-    position: relative; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* C'est le seul overflow autorisé */
+    overflow-y: visible; /* Force la visibilité sur l'axe vertical */
+    position: relative;
 }
 
 .container {
@@ -38,15 +39,14 @@ section {
    2. BARRE DE NAVIGATION (Menu Fixe)
    ========================================= */
 .navbar {
-    position: -webkit-sticky; /* Pour Safari */
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 9999;
-    background-color: #ffffff !important; /* Force le blanc pour être sûr qu'il ne soit pas transparent */
+    z-index: 9999 !important; /* Force la priorité absolue */
+    background-color: #ffffff; /* Pas de transparence pour le test */
     border-bottom: 1px solid #e0e6ed;
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: block !important; /* On s'assure qu'elle n'est pas cachée */
 }
 
 .nav-container {
