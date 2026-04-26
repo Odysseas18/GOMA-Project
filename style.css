@@ -47,14 +47,32 @@ section {
 /* =========================================
    2. BARRE DE NAVIGATION (Menu Fixe)
    ========================================= */
+html, body {
+    overflow-x: hidden;
+    height: auto;
+    position: relative;
+}
 .navbar {
+    position: -webkit-sticky; /* Pour iPhone/Safari */
     position: sticky;
     top: 0;
-    z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    z-index: 9999; /* Pour passer devant les images et les titres */
+    background-color: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #e0e6ed;
     padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* 3. Ajustement important pour le container mobile */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 0;
+    }
+    .nav-container {
+        gap: 15px;
+    }
 }
 
 .nav-container {
