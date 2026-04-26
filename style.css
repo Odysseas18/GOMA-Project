@@ -301,77 +301,156 @@ section {
     border: 1px solid #e2e8f0;
 }
 
-/* Conteneur de la timeline */
-.timeline {
-    position: relative;
-    padding-left: 35px;
-    margin-top: 30px;
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* La ligne verticale grise */
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 5px;
-    width: 3px;
-    height: 100%;
-    background-color: #e0e6ed;
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f7f9fc;
+    color: #222;
+    line-height: 1.7;
+    font-size: 18px;
+    overflow-x: hidden;
 }
 
-.timeline-item {
-    position: relative;
-    margin-bottom: 40px;
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 20px 48px;
 }
 
-/* Le petit point bleu sur la ligne */
-.timeline-dot {
-    position: absolute;
-    left: -41px; /* Aligné avec la ligne */
-    top: 5px;
-    width: 14px;
-    height: 14px;
-    background-color: #1f3c88;
+/* HERO SECTION */
+.hero {
+    display: flex !important; 
+    flex-direction: row;
+    align-items: stretch; 
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    overflow: hidden; 
+    margin-bottom: 24px;
+}
+
+.hero-left {
+    flex: 0 0 280px;
+    background-color: #f8fafd; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    border-right: 1px solid #e0e6ed;
+}
+
+.profile-img {
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
-    border: 3px solid #ffffff;
-    box-shadow: 0 0 0 3px #1f3c88; /* Effet de double cercle */
+    object-fit: cover;
+    border: 3px solid #1f3c88;
+    margin-bottom: 15px;
 }
 
-.timeline-date {
-    display: block;
+.hero-right {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* TYPOGRAPHIE */
+h1 { font-size: 52px; font-weight: 800; color: #111; margin-bottom: 10px; line-height: 1.15; }
+h2 { font-size: 34px; font-weight: 800; color: #1f3c88; margin-bottom: 20px; margin-top: 10px; }
+h3 { font-size: 26px; font-weight: 800; color: #222; margin-bottom: 14px; }
+p { margin-bottom: 16px; }
+
+/* BOUTONS CONTACT */
+.contact-info-small { margin-top: 20px; display: flex; flex-direction: column; gap: 12px; width: 100%; }
+.btn-email, .btn-linkedin {
+    padding: 10px 16px;
+    border-radius: 8px;
     font-size: 14px;
-    font-weight: 700;
-    color: #64748b;
-    margin-bottom: 5px;
-    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+.btn-email { background-color: #1f3c88; color: white !important; }
+.btn-linkedin { color: #1f3c88 !important; border: 2px solid #1f3c88; }
+.btn-email:hover, .btn-linkedin:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(31, 60, 136, 0.2); }
+
+/* SECTIONS */
+section {
+    background-color: #ffffff;
+    margin-bottom: 24px;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
 }
 
-.timeline-content h3 {
-    font-size: 22px;
-    color: #1f3c88;
-    margin-bottom: 12px;
+/* PROJETS (GRID) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 20px;
 }
-
-.timeline-content ul {
-    list-style-type: none; /* On retire les puces classiques */
-    padding-left: 0;
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #e8edf5;
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
 }
+.project-card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+.project-tag { font-size: 11px; font-weight: 800; text-transform: uppercase; color: #1f3c88; letter-spacing: 1.2px; margin-bottom: 12px; }
+.project-card .project-image { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; border: 1px solid #f0f0f0; }
+.tech-stack { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; padding-top: 15px; }
+.tech-stack span { background-color: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
 
-.timeline-content li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 10px;
+/* TIMELINE & EXPÉRIENCE */
+.timeline { position: relative; padding-left: 35px; margin-top: 30px; }
+.timeline::before { content: ''; position: absolute; left: 0; top: 10px; width: 3px; height: 100%; background-color: #e0e6ed; }
+.timeline-item { position: relative; margin-bottom: 50px; }
+.timeline-dot {
+    position: absolute; left: -42px; top: 5px; width: 14px; height: 14px;
+    background-color: #1f3c88; border-radius: 50%; border: 4px solid #ffffff;
+    box-shadow: 0 0 0 2px #1f3c88;
 }
+.timeline-date { display: block; font-size: 14px; font-weight: 700; color: #64748b; margin-bottom: 8px; text-transform: uppercase; }
+.timeline-content h3 { font-size: 24px; color: #1f3c88; margin-bottom: 12px; }
 
-/* On remplace les puces par des petits traits stylisés */
-.timeline-content li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: #1f3c88;
-    font-weight: bold;
+/* KPI CARDS (Nouveau) */
+.kpi-container { display: flex; gap: 15px; margin: 20px 0; flex-wrap: wrap; }
+.kpi-card { background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px 15px; border-radius: 10px; text-align: center; min-width: 130px; flex: 1; }
+.kpi-value { display: block; font-size: 22px; font-weight: 800; color: #1f3c88; }
+.kpi-label { font-size: 11px; color: #64748b; font-weight: 600; text-transform: uppercase; }
+
+.timeline-content ul { list-style: none; padding-left: 0; }
+.timeline-content li { position: relative; padding-left: 25px; margin-bottom: 12px; color: #334155; }
+.timeline-content li::before { content: "→"; position: absolute; left: 0; color: #1f3c88; font-weight: bold; }
+
+/* MEDIA QUERIES (ADAPTATION MOBILE) */
+@media (max-width: 768px) {
+    .hero { flex-direction: column !important; }
+    .hero-left { border-right: none; border-bottom: 1px solid #e0e6ed; width: 100%; }
+    .hero-right { padding: 30px 20px; text-align: center; }
+    .hero-right .intro { text-align: justify !important; font-size: 16px; }
+    h1 { font-size: 32px; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .kpi-card { min-width: 100px; }
 }
-
 /* --- ADAPTATION MOBILE (MEDIA QUERY) --- */
 @media (max-width: 768px) {
     .projects-grid {
