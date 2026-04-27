@@ -366,6 +366,63 @@
       margin-top: 4px;
     }
 
+    /* --- SECTION CHIFFRES (KPIs) --- */
+.hero-kpis {
+    display: flex !important; /* Force l'affichage en ligne */
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Permet de passer à la ligne sur mobile */
+}
+
+.kpi-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.kpi-number {
+    font-family: 'Playfair Display', serif; /* Ou ta police de titre */
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--rose); /* Ta couleur orange/rose */
+    line-height: 1;
+}
+
+.kpi-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 8px;
+}
+
+/* Les barres verticales de séparation */
+.kpi-divider {
+    width: 1px;
+    height: 50px;
+    background-color: #e0e0e0;
+}
+
+/* --- ADAPTATION MOBILE --- */
+@media (max-width: 768px) {
+    .hero-kpis {
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .kpi-divider {
+        display: none; /* On cache les barres sur mobile pour gagner de la place */
+    }
+    
+    .kpi-item {
+        width: 100%; /* Un chiffre par ligne sur petit mobile si besoin */
+        margin-bottom: 10px;
+    }
+    
+    .kpi-number {
+        font-size: 2rem;
+    }
+}
+
     /* ═══════════════════════════════
        SECTIONS COMMUNES
     ═══════════════════════════════ */
