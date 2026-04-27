@@ -369,18 +369,17 @@
     /* --- SECTION CHIFFRES (KPIs) --- */
 @media (max-width: 768px) {
     .hero-kpis {
-        display: flex !important;
-        flex-direction: row; /* Force l'alignement en ligne */
-        justify-content: space-between; /* Espace les blocs uniformément */
+        display: flex;
+        justify-content: flex-start; /* Aligné à gauche sur desktop */
         align-items: flex-start;
-        gap: 10px; /* Réduit l'espace pour que tout tienne sur une ligne */
-        padding: 0 10px;
+        gap: 40px;
+        margin-top: 30px;
     }
 
     .kpi-item {
-        flex: 1; /* Force chaque bloc à occuper le même espace */
-        text-align: center;
-        width: auto; /* Annule le width: 100% si présent */
+        display: flex;
+        flex-direction: column; /* Force le texte SOUS le chiffre */
+        align-items: flex-start; /* Aligne le texte à gauche du chiffre sur desktop */
     }
 
     .kpi-number {
