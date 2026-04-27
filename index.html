@@ -139,10 +139,14 @@
 }
 
 /* Si l'écran est petit (Mobile) */
-@media (max-width: 768px) {
-    /* Cache tous les éléments de la liste sauf le bouton de langue */
-    .nav-item-hide-mobile {
-        display: none !important;
+@media /* 1. On s'assure que la nav ne s'étire pas bizarrement */
+    nav {
+        display: flex !important;
+        flex-direction: row !important; /* Force l'alignement horizontal Logo | Bouton */
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 10px 5% !important;
+        height: 60px; /* Fixe une hauteur propre pour le mode portrait */
     }
     
     .nav-links {
