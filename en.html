@@ -141,15 +141,15 @@
 
 /* Si l'écran est petit (Mobile) */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none; /* Cache les liens normaux pour éviter l'encombrement */
-  }
-  
-  .lang-switch-mobile {
-    display: block; /* Force l'affichage du FR/EN */
-  }
+    /* Cache tous les éléments de la liste sauf le bouton de langue */
+    .nav-item-hide-mobile {
+        display: none !important;
+    }
+    
+    .nav-links {
+        gap: 0; /* Évite les décalages inutiles sur mobile */
+    }
 }
-
     /* Style pour les switchs de langue (FR/EN) */
 .lang-switch {
   font-weight: 700; /* Un peu plus gras */
@@ -310,35 +310,42 @@
     .kpi-label { font-size: 0.74rem; color: var(--text-muted); margin-top: 4px; }
 
     /* --- SECTION CHIFFRES (KPIs) --- */
+/* --- VERSION DESKTOP --- */
+.hero-kpis {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+
+.kpi-item {
+    display: flex;
+    flex-direction: column; /* FORCE LE TEXTE EN DESSOUS DU CHIFFRE */
+    align-items: flex-start; /* Aligné à gauche sur desktop */
+}
+
+/* --- VERSION MOBILE --- */
 @media (max-width: 768px) {
     .hero-kpis {
-        display: flex;
-        justify-content: flex-start; /* Aligné à gauche sur desktop */
-        align-items: flex-start;
-        gap: 40px;
-        margin-top: 30px;
+        flex-direction: row !important; /* FORCE L'ALIGNEMENT EN LIGNE */
+        justify-content: space-between;
+        gap: 10px;
     }
 
     .kpi-item {
-        display: flex;
-        flex-direction: column; /* Force le texte SOUS le chiffre */
-        align-items: flex-start; /* Aligne le texte à gauche du chiffre sur desktop */
+        align-items: center; /* CENTRE LE TEXTE SOUS LE CHIFFRE SUR MOBILE */
+        flex: 1;
     }
 
     .kpi-number {
-        font-size: 1.5rem; /* Réduit un peu la taille pour éviter le chevauchement */
+        font-size: 1.6rem; /* Plus petit pour que tout tienne en ligne */
     }
 
     .kpi-label {
-        font-size: 0.7rem; /* Réduit la taille du texte pour la lisibilité mobile */
-        line-height: 1.2;
-    }
-
-    .kpi-divider {
-        display: none; /* Cache les barres verticales pour gagner de la place */
+        font-size: 0.7rem;
+        text-align: center;
     }
 }
-
     /* ═══════════════════════════════
        COMMON SECTIONS
     ═══════════════════════════════ */
@@ -638,7 +645,7 @@ footer {
      
   </section>
 
-  <section id="competences">
+  <section id="skills" class="section-padding">
     <div class="section-wrap">
       <div class="eyebrow reveal">Technical Stack</div>
       <h2 class="section-title reveal">My <em>Skills</em></h2>
