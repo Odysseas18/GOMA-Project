@@ -103,6 +103,54 @@
       color: #fff !important;
     }
 
+     /*navigation mobile pour que la section pour changer
+    de langue puisse apparaitre */
+    nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: var(--surface);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.lang-switch-mobile {
+  font-weight: 800;
+  color: var(--rose);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: 2px solid var(--rose);
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.lang-switch-mobile:hover {
+  background: var(--rose);
+  color: white;
+}
+
+/* Si l'écran est petit (Mobile) */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Cache les liens normaux pour éviter l'encombrement */
+  }
+  
+  .lang-switch-mobile {
+    display: block; /* Force l'affichage du FR/EN */
+  }
+}
+
+
     /* ═══════════════════════════════
        HERO
     ═══════════════════════════════ */
@@ -478,16 +526,17 @@ footer {
 <body>
 
   <nav>
-    <a href="#hero" class="nav-logo">Odysseas <span>GN</span></a>
+  <div class="logo"><strong>Odysseas.</strong></div>
+  
+  <div class="nav-controls">
+    <a href="index.html" class="lang-switch-mobile">FR</a>
     <ul class="nav-links">
-      <li><a href="#competences">Skills</a></li>
-      <li><a href="#projets">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#formation">Education</a></li>
-      <li><a href="index.html" style="font-weight: bold; color: var(--rose);">FR</a></li>
-      <li><a href="#contact" class="nav-btn">Contact Me</a></li>
+      <li><a href="#contact" class="nav-btn">Contact</a></li>
     </ul>
-  </nav>
+  </div>
+</nav>
 
   <section id="hero">
     <div class="hero-inner">
