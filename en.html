@@ -549,28 +549,28 @@
 
   <section id="formation">
     <div class="section-wrap">
-      <div class="eyebrow reveal">Academic Background</div>
-      <h2 class="section-title reveal">My <em>Education</em></h2>
+      <div class="eyebrow reveal">Académique</div>
+      <h2 class="section-title reveal">Ma <em>formation</em></h2>
       <div class="edu-grid">
         <div class="edu-card reveal">
           <div class="edu-icon">🚀</div>
           <div class="edu-info">
-            <h4>Data Analyst Bootcamp</h4>
+            <h4>Bootcamp Data Analyst</h4>
             <p>Data Rockstar — Python, SQL</p>
           </div>
         </div>
         <div class="edu-card reveal">
           <div class="edu-icon">🎓</div>
           <div class="edu-info">
-            <h4>Master's Degree</h4>
-            <p>International Marketing — ESCE Business School</p>
+            <h4>Master Marketing International</h4>
+            <p>ESCE Business School</p>
           </div>
         </div>
         <div class="edu-card reveal">
           <div class="edu-icon">📚</div>
           <div class="edu-info">
-            <h4>Bachelor's Degree</h4>
-            <p>Applied Foreign Languages — University of Reims</p>
+            <h4>Licence LEA</h4>
+            <p>Université de Reims</p>
           </div>
         </div>
       </div>
@@ -580,26 +580,45 @@
   <section id="langues">
     <div class="section-wrap">
       <div class="eyebrow reveal">Communication</div>
-      <h2 class="section-title reveal">My <em>Languages</em></h2>
+      <h2 class="section-title reveal">Mes <em>langues</em></h2>
       <div class="lang-row">
-        <div class="lang-card reveal"><span class="lang-name">🇬🇧 English</span><span class="lang-level">B2 Fluent</span></div>
-        <div class="lang-card reveal"><span class="lang-name">🇪🇸 Spanish</span><span class="lang-level">B1</span></div>
-        <div class="lang-card reveal"><span class="lang-name">🇵🇹 Portuguese</span><span class="lang-level">Basics</span></div>
-        <div class="lang-card reveal"><span class="lang-name">🇫🇷 French</span><span class="lang-level">Native</span></div>
+        <div class="lang-card reveal"><span class="lang-name">🇬🇧 Anglais</span><span class="lang-level">B2 Fluent</span></div>
+        <div class="lang-card reveal"><span class="lang-name">🇪🇸 Espagnol</span><span class="lang-level">B1</span></div>
+        <div class="lang-card reveal"><span class="lang-name">🇵🇹 Portugais</span><span class="lang-level">Notions</span></div>
+        <div class="lang-card reveal"><span class="lang-name">🇫🇷 Français</span><span class="lang-level">Maternel</span></div>
       </div>
     </div>
   </section>
 
   <section id="contact">
     <div class="section-wrap">
-      <div class="eyebrow reveal" style="justify-content:center;">Let's work together</div>
-      <h2 class="section-title reveal" style="text-align:center;">Ready to <em>Collaborate</em></h2>
+      <div class="eyebrow reveal" style="justify-content:center;">Travaillons ensemble</div>
+      <h2 class="section-title reveal" style="text-align:center;">Prête à <em>collaborer</em></h2>
       <div class="contact-box reveal">
-        <p>I am open to opportunities in Data Analysis, Business Intelligence, or Marketing Analytics. Don't hesitate to reach out!</p>
+        <p>Je suis ouverte aux opportunités en analyse de données, Business Intelligence ou marketing analytics. N'hésitez pas à me contacter !</p>
         <div class="contact-buttons">
-          <a href="mailto:odysseas.gomankala@gmail.com" class="btn btn-rose">✉ Send me an email</a>
+          <a href="mailto:odysseas.gomankala@gmail.com" class="btn btn-rose">✉ m'envoyer un email</a>
           <a href="https://www.linkedin.com/in/odysseas-goma-a5ba0a1b9/" target="_blank" class="btn btn-ghost">LinkedIn</a>
         </div>
       </div>
     </div>
   </section>
+
+  <footer>
+    <p>©  2026 Odysseas GOMA NKALA — Portfolio Data Analyst</p>
+  </footer>
+
+  <script>
+    // Animation au scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
