@@ -150,6 +150,27 @@
   }
 }
 
+    /* Style pour les switchs de langue (FR/EN) */
+.lang-switch {
+  font-weight: 700; /* Un peu plus gras */
+  color: var(--rose); /* Ta couleur orange/rose */
+  text-decoration: none;
+  font-size: 0.9rem;
+  
+  /* C'est ce bloc qui crée le cadre arrondi */
+  border: 1px solid var(--rose); 
+  padding: 5px 10px;
+  border-radius: 12px; /* Pour des coins bien arrondis */
+  
+  transition: all 0.3s ease; /* Pour un effet fluide au survol */
+  display: inline-block; /* Pour que le padding et la border s'appliquent bien */
+}
+
+/* Effet au survol du bouton de langue */
+.lang-switch:hover {
+  background-color: var(--rose); /* Le fond devient rose */
+  color: white; /* Le texte devient blanc */
+}
 
     /* ═══════════════════════════════
        HERO
@@ -526,14 +547,15 @@ footer {
 <body>
 
   <nav>
-  <div class="logo"><strong>Odysseas.</strong></div>
+  <div class="logo"><strong>Odysseas<em>GN</em></strong></div>
   
   <div class="nav-controls">
     <a href="index.html" class="lang-switch-mobile">FR</a>
-    <ul class="nav-links">
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#formation">Education</a></li>
-      <li><a href="#contact" class="nav-btn">Contact</a></li>
+    <li><a href="#competences">Skills</a></li> 
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#formation">Education</a></li>
+    <li><a href="index.html" class="lang-switch">FR</a></li>
+    <li><a href="#contact" class="nav-btn">Contact</a></li>
     </ul>
   </div>
 </nav>
