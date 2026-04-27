@@ -139,7 +139,8 @@
 }
 
 /* Si l'écran est petit (Mobile) */
-@media /* 1. On s'assure que la nav ne s'étire pas bizarrement */
+@media (max-width: 768px) {
+    /* 1. On s'assure que la nav ne s'étire pas bizarrement */
     nav {
         display: flex !important;
         flex-direction: row !important; /* Force l'alignement horizontal Logo | Bouton */
